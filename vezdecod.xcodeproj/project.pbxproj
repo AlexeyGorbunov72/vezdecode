@@ -27,6 +27,11 @@
 		43257440285DEB54004CEAAB /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4325743F285DEB54004CEAAB /* CartService.swift */; };
 		43257442285DEB62004CEAAB /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43257441285DEB62004CEAAB /* FilterService.swift */; };
 		43257444285DEB74004CEAAB /* CatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43257443285DEB74004CEAAB /* CatalogService.swift */; };
+		43257447285DF90C004CEAAB /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 43257446285DF90C004CEAAB /* products.json */; };
+		43257449285DF928004CEAAB /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 43257448285DF928004CEAAB /* categories.json */; };
+		4325744B285DF94F004CEAAB /* tags.json in Resources */ = {isa = PBXBuildFile; fileRef = 4325744A285DF94F004CEAAB /* tags.json */; };
+		4325744D285DF9C2004CEAAB /* CatalogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4325744C285DF9C2004CEAAB /* CatalogItem.swift */; };
+		4325744F285DF9CE004CEAAB /* CatalogItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4325744E285DF9CE004CEAAB /* CatalogItemDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +57,11 @@
 		4325743F285DEB54004CEAAB /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
 		43257441285DEB62004CEAAB /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		43257443285DEB74004CEAAB /* CatalogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogService.swift; sourceTree = "<group>"; };
+		43257446285DF90C004CEAAB /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		43257448285DF928004CEAAB /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		4325744A285DF94F004CEAAB /* tags.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tags.json; sourceTree = "<group>"; };
+		4325744C285DF9C2004CEAAB /* CatalogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItem.swift; sourceTree = "<group>"; };
+		4325744E285DF9CE004CEAAB /* CatalogItemDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,7 @@
 		4325740C285DE77C004CEAAB /* vezdecod */ = {
 			isa = PBXGroup;
 			children = (
+				43257445285DF8FF004CEAAB /* Mocks */,
 				43257424285DE919004CEAAB /* Cart */,
 				43257423285DE910004CEAAB /* Catalog */,
 				4325740D285DE77C004CEAAB /* AppDelegate.swift */,
@@ -105,6 +116,8 @@
 				43257426285DE935004CEAAB /* CatalogCoordinator.swift */,
 				4325742A285DE94E004CEAAB /* CatalogViewController.swift */,
 				43257443285DEB74004CEAAB /* CatalogService.swift */,
+				4325744C285DF9C2004CEAAB /* CatalogItem.swift */,
+				4325744E285DF9CE004CEAAB /* CatalogItemDto.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -139,6 +152,16 @@
 				43257441285DEB62004CEAAB /* FilterService.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		43257445285DF8FF004CEAAB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4325744A285DF94F004CEAAB /* tags.json */,
+				43257446285DF90C004CEAAB /* products.json */,
+				43257448285DF928004CEAAB /* categories.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +222,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43257447285DF90C004CEAAB /* products.json in Resources */,
+				43257449285DF928004CEAAB /* categories.json in Resources */,
 				4325741A285DE77E004CEAAB /* LaunchScreen.storyboard in Resources */,
+				4325744B285DF94F004CEAAB /* tags.json in Resources */,
 				43257417285DE77E004CEAAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +241,7 @@
 				4325742B285DE94E004CEAAB /* CatalogViewController.swift in Sources */,
 				43257442285DEB62004CEAAB /* FilterService.swift in Sources */,
 				43257444285DEB74004CEAAB /* CatalogService.swift in Sources */,
+				4325744F285DF9CE004CEAAB /* CatalogItemDto.swift in Sources */,
 				43257429285DE941004CEAAB /* MenuItemCoordinator.swift in Sources */,
 				43257436285DE9E4004CEAAB /* CartItemTableViewCell.swift in Sources */,
 				4325742E285DE96C004CEAAB /* MenuItemViewController.swift in Sources */,
@@ -227,6 +254,7 @@
 				43257434285DE9CC004CEAAB /* CartCoordinator.swift in Sources */,
 				4325740E285DE77C004CEAAB /* AppDelegate.swift in Sources */,
 				43257410285DE77C004CEAAB /* SceneDelegate.swift in Sources */,
+				4325744D285DF9C2004CEAAB /* CatalogItem.swift in Sources */,
 				43257427285DE935004CEAAB /* CatalogCoordinator.swift in Sources */,
 				43257430285DE992004CEAAB /* MenuItemCollectionViewCell.swift in Sources */,
 			);
