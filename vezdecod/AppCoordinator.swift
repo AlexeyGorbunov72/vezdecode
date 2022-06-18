@@ -18,7 +18,14 @@ final class AppCoordinator {
     }
 
     func start() {
-        startCatalogCoordinator()
+//        startCatalogCoordinator()
+        changeRootViewController(CartViewController())
+        
+        CatalogService().fetchCatalogItems(for: 676155)?.forEach {
+            CartService.shared.appendItem($0)
+        }
+        print(CartService.shared.items.count)
+        
     }
 
     private func startCatalogCoordinator() {

@@ -36,6 +36,8 @@
 		43257453285E0793004CEAAB /* FilterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43257452285E0792004CEAAB /* FilterDTO.swift */; };
 		43257456285E0CE7004CEAAB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43257455285E0CE7004CEAAB /* Category.swift */; };
 		43257458285E0E9A004CEAAB /* CategoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43257457285E0E9A004CEAAB /* CategoryDTO.swift */; };
+		4325745B285E19F9004CEAAB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4325745A285E19F9004CEAAB /* SnapKit */; };
+		4325745E285E2257004CEAAB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4325745D285E2257004CEAAB /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,7 @@
 		43257452285E0792004CEAAB /* FilterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDTO.swift; sourceTree = "<group>"; };
 		43257455285E0CE7004CEAAB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		43257457285E0E9A004CEAAB /* CategoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDTO.swift; sourceTree = "<group>"; };
+		4325745D285E2257004CEAAB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4325745B285E19F9004CEAAB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,7 @@
 		4325740C285DE77C004CEAAB /* vezdecod */ = {
 			isa = PBXGroup;
 			children = (
+				4325745C285E2249004CEAAB /* Resources */,
 				43257445285DF8FF004CEAAB /* Mocks */,
 				43257424285DE919004CEAAB /* Cart */,
 				43257423285DE910004CEAAB /* Catalog */,
@@ -184,6 +189,14 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		4325745C285E2249004CEAAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4325745D285E2257004CEAAB /* Colors.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +213,9 @@
 			dependencies = (
 			);
 			name = vezdecod;
+			packageProductDependencies = (
+				4325745A285E19F9004CEAAB /* SnapKit */,
+			);
 			productName = vezdecod;
 			productReference = 4325740A285DE77C004CEAAB /* vezdecod.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +244,9 @@
 				Base,
 			);
 			mainGroup = 43257401285DE77C004CEAAB;
+			packageReferences = (
+				43257459285E19F9004CEAAB /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4325740B285DE77C004CEAAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +282,7 @@
 				43257444285DEB74004CEAAB /* CatalogService.swift in Sources */,
 				4325744F285DF9CE004CEAAB /* CatalogItemDto.swift in Sources */,
 				43257429285DE941004CEAAB /* MenuItemCoordinator.swift in Sources */,
+				4325745E285E2257004CEAAB /* Colors.swift in Sources */,
 				43257436285DE9E4004CEAAB /* CartItemTableViewCell.swift in Sources */,
 				4325742E285DE96C004CEAAB /* MenuItemViewController.swift in Sources */,
 				4325743B285DEA37004CEAAB /* FilterPopUpViewController.swift in Sources */,
@@ -488,6 +508,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43257459285E19F9004CEAAB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4325745A285E19F9004CEAAB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43257459285E19F9004CEAAB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43257402285DE77C004CEAAB /* Project object */;
 }

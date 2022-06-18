@@ -9,7 +9,7 @@ import Foundation
 
 final class JSONProvider {
     func fetchJSON<T: Decodable>(named: String) -> T? {
-        if let url = Bundle.main.url(forResource: "products", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: named, withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
