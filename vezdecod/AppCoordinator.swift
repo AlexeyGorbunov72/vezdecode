@@ -19,7 +19,6 @@ final class AppCoordinator {
 
     func start() {
         startCatalogCoordinator()
-        print(CatalogService().fetchCatalogItems())
     }
 
     private func startCatalogCoordinator() {
