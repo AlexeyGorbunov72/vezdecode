@@ -13,8 +13,10 @@ final class CatalogService {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
-                let jsonData = try decoder.decode([CatalogItemDto].self, from: data)
-                return jsonData.person
+                let jsonData = try decoder.decode([CatalogItemDTO].self, from: data)
+                return jsonData.compactMap {
+                    CatalogItem(with: $0)
+                }
             } catch {
                 print("error:\(error)")
             }

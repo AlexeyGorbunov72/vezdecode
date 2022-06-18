@@ -7,8 +7,22 @@
 
 import Foundation
 
-struct CatalogItemDto: Decodable {
-    private enum CodingKeys: CodingKeys {
+struct CatalogItemDTO: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case categoryId = "category_id"
+        case name
+        case description
+        case image
+        case actualPrice = "price_current"
+        case originalPrice = "price_old"
+        case measure
+        case measureUnit = "measure_unit"
+        case energyPer100Grams = "energy_per_100_grams"
+        case proteinsPer100Grams = "proteins_per_100_grams"
+        case fatsPer100Grams = "fats_per_100_grams"
+        case carbohydratesPer100Grams = "carbohydrates_per_100_grams"
+        case tagIds = "tag_ids"
         
     }
 
@@ -18,9 +32,14 @@ struct CatalogItemDto: Decodable {
     let description: String
     let image: String
     let actualPrice: Decimal
-    let originalPrice: Decimal
+    let originalPrice: Decimal?
     let measure: Decimal
-    let 
+    let measureUnit: String
+    let energyPer100Grams: Decimal
+    let proteinsPer100Grams: Decimal
+    let fatsPer100Grams: Decimal
+    let carbohydratesPer100Grams: Decimal
+    let tagIds: [Int]
 }
 
 /*
