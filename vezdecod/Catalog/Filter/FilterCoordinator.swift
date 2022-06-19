@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import UIKit
+
+final class FilterCoordinator {
+  var filterPopUpViewController: FilterPopUpViewController?
+  var didFinish: (() -> Void)?
+  func start() -> UIViewController {
+    let filterPopUpViewController = FilterPopUpViewController()
+    filterPopUpViewController.zalupa = {
+      self.filterPopUpViewController = nil
+      self.didFinish?()
+    }
+    self.filterPopUpViewController = filterPopUpViewController
+    return filterPopUpViewController
+  }
+}

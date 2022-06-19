@@ -25,6 +25,7 @@ final class AppCoordinator {
         let catalogCoordinator = CatalogCoordinator()
         changeRootViewController(catalogCoordinator.container)
         self.catalogCoordinator = catalogCoordinator
+        catalogCoordinator.start()
     }
 
     private func changeRootViewController(_ viewController: UIViewController) {
